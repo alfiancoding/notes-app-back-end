@@ -14,11 +14,11 @@ const addNoteHandler = (request, h) => {
   };
 
   notes.push(newNote);
-  const isSuccess = notes.filter((note) =>note.id === id).lenght>0;
+  const isSuccess = notes.filter((note) =>note.id === id).length>0;
   if (isSuccess){
     const response = h.response({
       status: 'success',
-      message: 'catatan berhasil ditambahkan',
+      message: 'catatan berhasil ditambahkan 1',
       data: {
         noteId: id,
       },
@@ -28,7 +28,7 @@ const addNoteHandler = (request, h) => {
   }
   const response = h.response({
     status:'fail',
-    massage: 'catatan gagal ditambahkan',
+    massage: 'catatan gagal ditambahkan 1',
   });
   response.code(500);
   return response;
